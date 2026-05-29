@@ -7,17 +7,22 @@
     <meta name="description" content="Patchwork Preschool in Provo, Utah offers premier, affordable traditional Pre-K programs. Active, hands-on kindergarten readiness for Provo & Orem families.">
     <meta name="keywords" content="Provo Preschools, Preschools in Provo, Orem Preschools, Preschools in Orem, Utah Preschools, Utah county preschools, Preschools near me, pre-k preschools, traditional preschools, cheap preschools, best preschool in provo">
     
+    <!-- Tailwind CSS for Modern Styling -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Google Fonts for a friendly, modern tech-parent look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         body { font-family: 'Quicksand', sans-serif; }
-        h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
+        h1, h2, h3, h4, h5 { font-family: 'Fredoka', sans-serif; }
+        /* Style for the rotating banner dots */
+        .banner-dot.active { background-color: #f59e0b; /* amber-500 */ }
     </style>
 
+    <!-- AI & Search Engine Schema Markup (GEO Optimization) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -56,197 +61,382 @@
 </head>
 <body class="bg-amber-50/30 text-stone-800 antialiased">
 
+    <!-- Top Call-to-Action Bar (Mobile Friendly) -->
     <div class="bg-amber-400 text-stone-900 text-center py-2 px-4 text-sm font-bold shadow-sm flex justify-center items-center gap-2">
         <span>🎨 Now Touring for Fall 2026! Spaces are limited.</span>
         <a href="tel:8018367904" class="underline hover:text-stone-700">Call or Text: (801) 836-7904</a>
     </div>
 
+    <!-- Navigation (Primrose Layout Style) -->
     <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-md z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2">
-                <span class="text-2xl font-bold bg-gradient-to-r from-red-500 via-amber-500 to-sky-500 bg-clip-text text-transparent">Patchwork Preschool</span>
+                <!-- Refined Patchwork Logo (replace src with actual logo later) -->
+                <span class="text-3xl font-bold bg-gradient-to-r from-red-500 via-amber-500 to-sky-500 bg-clip-text text-transparent">Patchwork Preschool</span>
             </a>
-            <nav class="hidden md:flex items-center gap-8 font-semibold text-stone-600">
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-stone-700">
                 <a href="#about" class="hover:text-amber-500 transition">Our Mission</a>
                 <a href="#classes" class="hover:text-sky-500 transition">Classes & Pricing</a>
                 <a href="#staff" class="hover:text-red-500 transition">Meet Our Staff</a>
-                <a href="https://instagram.com/patchworkpreschool" target="_blank" class="hover:text-pink-600 transition">Instagram</a>
+                <a href="#faq" class="hover:text-amber-500 transition">FAQ</a>
+                <a href="#contact" class="hover:text-sky-500 transition">Contact Us</a>
             </nav>
             <div>
-                <a href="tel:8018367904" class="bg-sky-500 text-white font-bold px-5 py-2.5 rounded-full hover:bg-sky-600 transition shadow-md block text-center text-sm">
+                <a href="tel:8018367904" class="bg-red-500 text-white font-bold px-6 py-3 rounded-full hover:bg-red-600 transition shadow-md block text-center text-sm">
                     Schedule a Tour
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="relative bg-gradient-to-b from-sky-100 to-amber-50/20 py-20 lg:py-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 text-center lg:text-left">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-tight">
-                    Where learning is <span class="text-amber-500">an adventure!</span>
-                </h1>
-                <p class="text-lg text-stone-600 max-w-xl mx-auto lg:mx-0">
-                    Discover why parents rank us as a top choice for traditional, hands-on preschool programs in Utah County. We blend structured kindergarten prep with joyful discovery.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="tel:8018367904" class="bg-red-500 text-white font-bold px-8 py-4 rounded-full hover:bg-red-600 transition text-center shadow-lg transform hover:-translate-y-0.5">
-                        Enroll or Call Now
-                    </a>
-                    <a href="#classes" class="bg-white border-2 border-stone-200 font-bold px-8 py-4 rounded-full hover:bg-stone-50 transition text-center text-stone-700 shadow-sm">
-                        View Class Schedules
-                    </a>
-                </div>
+    <!-- Full-Width Rotating Hero Banner (Primrose Style) -->
+    <section class="relative bg-stone-900 h-[60vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden">
+        
+        <!-- Rotating Image Container -->
+        <div id="hero-carousel" class="absolute inset-0 w-full h-full">
+            <!-- Image 1 -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000">
+                <img src="images/Orem Preschool Playing.JPG" alt="Children playing together, Orem preschool activities" class="w-full h-full object-cover">
             </div>
-            <div class="relative mx-auto lg:ml-auto w-full max-w-md">
-                <div class="absolute inset-0 bg-amber-300 rounded-3xl transform rotate-3 scale-105 opacity-40"></div>
-                <div class="absolute inset-0 bg-sky-300 rounded-3xl transform -rotate-3 scale-105 opacity-40"></div>
-                <div class="relative bg-stone-200 h-80 rounded-3xl shadow-xl overflow-hidden flex items-center justify-center border-4 border-white">
-                    <img src="Selected%20Images/Provo%20Preschool%20playing.JPG" 
-     alt="Patchwork Preschool classroom in Provo Utah showing hands-on learning stations and Pre-K activities" 
-     class="w-full h-full object-cover">
-                </div>
+            <!-- Image 2 (Hidden by default) -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+                <img src="images/Our Favorite preschool in utah.JPG" alt="Happy preschool children, favorite Utah early education" class="w-full h-full object-cover">
+            </div>
+            <!-- Image 3 (Hidden by default) -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+                <img src="images/Provo Preschool playing.JPG" alt="Provo preschool learning through play" class="w-full h-full object-cover">
+            </div>
+             <!-- Image 4 (Hidden by default) -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+                <img src="images/Top preschool in utah valley.JPG" alt="Structured play, Utah Valley top preschool" class="w-full h-full object-cover">
+            </div>
+             <!-- Image 5 (Hidden by default) -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+                <img src="images/Top-rated-Provo-Preschools.jpg" alt="Active children, top-rated Provo preschools" class="w-full h-full object-cover">
+            </div>
+             <!-- Image 6 (Hidden by default) -->
+            <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000">
+                <img src="images/Provo-Preschools-Community-Helper.png" alt="Preschoolers meeting community helper" class="w-full h-full object-cover">
             </div>
         </div>
-    </section>
 
-    <section id="about" class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">Our Core Mission</h2>
-            <p class="text-stone-600">Preparing every child for kindergarten through intentional, loving, and evidence-based early education structures right here in Provo, Utah.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
-                <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-500 text-2xl mb-6">🎯</div>
-                <h3 class="text-xl font-bold text-stone-900 mb-3">Individual Focus</h3>
-                <p class="text-stone-600 text-sm leading-relaxed">Every child is unique and important. We provide intentional, specialized attention to match your child's pace and personal learning style.</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
-                <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-500 text-2xl mb-6">📚</div>
-                <h3 class="text-xl font-bold text-stone-900 mb-3">Core Subjects</h3>
-                <p class="text-stone-600 text-sm leading-relaxed">We focus deep on age-appropriate reading, writing, mathematics, science, creative art, music, and crucial lifelong social skills.</p>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition">
-                <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center text-sky-500 text-2xl mb-6">🚀</div>
-                <h3 class="text-xl font-bold text-stone-900 mb-3">Hands-On Learning</h3>
-                <p class="text-stone-600 text-sm leading-relaxed">We live by "learning by doing." Your child will explore science splashing, light labs, and creative building projects designed to spark joy.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Black Overlay for Text Contrast -->
+        <div class="absolute inset-0 bg-black/40"></div>
 
-    <section id="classes" class="bg-stone-50 py-20 border-y border-stone-200/60">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">Preschool Programs & Scheduling</h2>
-                <p class="text-stone-600">Tailored, traditional Pre-K schedules matching local Utah County family needs with highly competitive, cheap preschool rates.</p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-3xl p-6 shadow-sm border-2 border-red-100 flex flex-col justify-between">
-                    <div>
-                        <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">MWF Morning</span>
-                        <h4 class="text-xl font-bold text-stone-900 mt-4 mb-2">Pre-K Prep</h4>
-                        <p class="text-stone-500 text-xs mb-4">1 year prior to kindergarten. Must be 4 by first day.</p>
-                        <p class="text-stone-600 text-sm font-semibold">🕒 9:00 AM - 11:30 AM</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-stone-100">
-                        <p class="text-2xl font-bold text-stone-900">$180 <span class="text-xs font-normal text-stone-500">/ month</span></p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border-2 border-amber-100 flex flex-col justify-between">
-                    <div>
-                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">MWF Afternoon</span>
-                        <h4 class="text-xl font-bold text-stone-900 mt-4 mb-2">Pre-K Prep</h4>
-                        <p class="text-stone-500 text-xs mb-4">1 year prior to kindergarten. Must be 4 by first day.</p>
-                        <p class="text-stone-600 text-sm font-semibold">🕒 12:30 PM - 3:00 PM</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-stone-100">
-                        <p class="text-2xl font-bold text-stone-900">$180 <span class="text-xs font-normal text-stone-500">/ month</span></p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border-2 border-sky-100 flex flex-col justify-between">
-                    <div>
-                        <span class="bg-sky-100 text-sky-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">TTh Morning</span>
-                        <h4 class="text-xl font-bold text-stone-900 mt-4 mb-2">Early Explorers</h4>
-                        <p class="text-stone-500 text-xs mb-4">2 years prior to kindergarten. Must be 3 by first day.</p>
-                        <p class="text-stone-600 text-sm font-semibold">🕒 9:00 AM - 11:30 AM</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-stone-100">
-                        <p class="text-2xl font-bold text-stone-900">$150 <span class="text-xs font-normal text-stone-500">/ month</span></p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-sm border-2 border-emerald-100 flex flex-col justify-between">
-                    <div>
-                        <span class="bg-emerald-100 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">TTh Afternoon</span>
-                        <h4 class="text-xl font-bold text-stone-900 mt-4 mb-2">Pre-K Prep</h4>
-                        <p class="text-stone-500 text-xs mb-4">1 year prior to kindergarten. Must be 4 by first day.</p>
-                        <p class="text-stone-600 text-sm font-semibold">🕒 12:30 PM - 3:00 PM</p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-stone-100">
-                        <p class="text-2xl font-bold text-stone-900">$140 <span class="text-xs font-normal text-stone-500">/ month</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="staff" class="py-20 max-w-5xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 mb-4">Meet Our Passionate Teachers</h2>
-            <p class="text-stone-600">Experienced, certified local leaders committed to your child's developmental safety and happiness.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm flex flex-col sm:flex-row gap-6 items-center">
-                <div class="w-32 h-32 bg-stone-200 rounded-2xl shrink-0 border-2 border-amber-300 overflow-hidden flex items-center justify-center">
-    <img src="Selected Images/Preschool-in-Provo-Rebecca.jpg" alt="Miss Rebecca, Owner and Head Teacher of Patchwork Preschool" class="w-full h-full object-cover">
-</div>
-                <div>
-                    <h3 class="text-xl font-bold text-stone-900">Miss Rebecca</h3>
-                    <p class="text-amber-500 font-medium text-sm mb-3">Owner / Head Teacher</p>
-                    <p class="text-stone-600 text-xs leading-relaxed">Teaching preschool in Provo since 2010. Holds a degree in Secondary Education from BYU and served proudly on the Provo City School District Board of Education for 8 years (2017 - 2024).</p>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm flex flex-col sm:flex-row gap-6 items-center">
-                <div class="bg-white p-6 rounded-3xl border border-stone-100 shadow-sm flex flex-col sm:flex-row gap-6 items-center">
-    <div class="w-32 h-32 bg-stone-200 rounded-2xl shrink-0 border-2 border-amber-300 overflow-hidden flex items-center justify-center">
-        <img src="Selected Images/Preschool-in-Provo-Cami.jpg" alt="Miss Cami, Teacher at Patchwork Preschool" class="w-full h-full object-cover">
-    </div>
-    <div>
-        <h3 class="text-xl font-bold text-stone-900">Miss Cami</h3>
-        <p class="text-sky-500 font-medium text-sm mb-3">Teacher</p>
-        <p class="text-stone-600 text-xs leading-relaxed">Teaching at Patchwork since 2011. Certified CNA with an expansive background in youth medical fields, fitness, and early childhood nutrition development.</p>
-    </div>
-</div>
-        </div>
-    </section>
-
-    <footer class="bg-stone-900 text-stone-300 pt-16 pb-8 border-t-4 border-amber-400">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 pb-12 border-b border-stone-800">
-            <div>
-                <h4 class="text-white text-lg font-bold mb-4">Patchwork Preschool</h4>
-                <p class="text-sm text-stone-400 mb-4">Traditional preschool structures & hands-on kindergarten prep for families in Provo, Orem, and Utah County.</p>
-                <a href="https://instagram.com/patchworkpreschool" target="_blank" class="text-pink-400 hover:underline text-sm font-semibold flex items-center gap-1">
-                    📸 Follow us on Instagram
+        <!-- Text Overlay Content -->
+        <div class="relative z-10 max-w-7xl mx-auto h-full px-6 flex flex-col justify-center text-center items-center">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight max-w-4xl">
+                Where every child is <span class="text-amber-300">a masterpiece.</span>
+            </h1>
+            <p class="text-2xl text-white font-bold mt-4 tracking-wide">
+                Patchwork Preschool.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-5">
+                <a href="tel:8018367904" class="bg-amber-400 text-stone-900 font-bold px-10 py-5 rounded-full hover:bg-amber-500 transition text-center shadow-lg text-lg transform hover:-translate-y-0.5">
+                    Call/Text to Enroll Now
+                </a>
+                <a href="#classes" class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/20 transition text-center shadow-sm text-lg">
+                    View Class Times
                 </a>
             </div>
-            <div>
-                <h4 class="text-white text-lg font-bold mb-4">Contact & Location</h4>
-                <p class="text-sm text-stone-400">📍 1084 West 990 North, Provo, UT 84604</p>
-                <p class="text-sm text-stone-400 mt-2">📞 Call / Text: (801) 836-7904</p>
+        </div>
+
+        <!-- Carousel Indicators (Dots) -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            <button class="banner-dot active w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(0)"></button>
+            <button class="banner-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(1)"></button>
+            <button class="banner-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(2)"></button>
+            <button class="banner-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(3)"></button>
+            <button class="banner-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(4)"></button>
+            <button class="banner-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white" onclick="showSlide(5)"></button>
+        </div>
+    </section>
+
+    <!-- Why Parents Choose Patchwork (Integrated SEO Content) -->
+    <section id="about" class="py-24 bg-white border-b border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-sky-600 font-bold text-sm tracking-widest uppercase">Our Mission</span>
+                <h2 class="text-4xl sm:text-5xl font-bold text-stone-900 leading-tight">
+                    Your Search for Orem & Provo Preschools Ends Here
+                </h2>
+                <p class="text-lg text-stone-700 leading-relaxed">
+                    Patchwork Preschool provides a high-quality, traditional Pre-K education designed for children aged 3 to 5 in Provo and surrounding Utah County communities. Our structured curriculum blends hands-on learning with essential social-emotional development. 
+                </p>
+                <p class="text-lg text-stone-700 leading-relaxed font-semibold">
+                    Find out why families trust us for academic excellence and kindergarten readiness.
+                </p>
+                <a href="#classes" class="inline-flex items-center gap-2 bg-sky-500 text-white font-bold px-8 py-4 rounded-full hover:bg-sky-600 transition shadow-md">
+                    Explore Our Programs
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
             </div>
+            
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-amber-100 p-8 rounded-3xl space-y-3 shadow-inner border border-amber-200">
+                    <span class="text-4xl">🎯</span>
+                    <h4 class="text-xl font-bold text-stone-900">Kindergarten Ready</h4>
+                    <p class="text-sm text-stone-700">Rigorous and fun academic preparation.</p>
+                </div>
+                <div class="bg-red-100 p-8 rounded-3xl space-y-3 shadow-inner border border-red-200">
+                    <span class="text-4xl">📚</span>
+                    <h4 class="text-xl font-bold text-stone-900">Certified Staff</h4>
+                    <p class="text-sm text-stone-700">Experienced Provo educators leading the way.</p>
+                </div>
+                <div class="bg-sky-100 p-8 rounded-3xl space-y-3 shadow-inner border border-sky-200">
+                    <span class="text-4xl">🚀</span>
+                    <h4 class="text-xl font-bold text-stone-900">Hands-on Learning</h4>
+                    <p class="text-sm text-stone-700">Active discovery in our Provo classroom.</p>
+                </div>
+                <div class="bg-emerald-100 p-8 rounded-3xl space-y-3 shadow-inner border border-emerald-200">
+                    <span class="text-4xl">🎨</span>
+                    <h4 class="text-xl font-bold text-stone-900">Creative Art</h4>
+                    <p class="text-sm text-stone-700">Exploring music, art, and expression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes & Pricing (Card Grid Layout) -->
+    <section id="classes" class="bg-stone-50 py-24 border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-sky-600 font-bold text-sm tracking-widest uppercase">Class Schedules</span>
+                <h2 class="text-4xl sm:text-5xl font-bold text-stone-900">Our Pre-K Programs</h2>
+                <p class="text-stone-700 text-lg">
+                    Discover traditional preschool structures for kindergarten preparation in Utah County, with highly competitive, affordable rates.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Class Cards -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100 flex flex-col justify-between transform transition hover:-translate-y-2 hover:shadow-xl">
+                    <div>
+                        <span class="bg-red-100 text-red-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">MWF Morning</span>
+                        <h4 class="text-2xl font-bold text-stone-900 mt-5 mb-3">Pre-K Prep</h4>
+                        <p class="text-stone-600 text-sm mb-5 leading-relaxed">1 year prior to kindergarten. Must be 4 by first day of school.</p>
+                        <p class="text-stone-800 text-base font-bold flex items-center gap-2">🕒 9:00 AM - 11:30 AM</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-stone-100 flex items-end justify-between">
+                        <p class="text-3xl font-bold text-stone-950">$180 <span class="text-sm font-normal text-stone-500">/ month</span></p>
+                        <a href="tel:8018367904" class="text-sky-500 font-bold text-sm">Enroll</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100 flex flex-col justify-between transform transition hover:-translate-y-2 hover:shadow-xl">
+                    <div>
+                        <span class="bg-amber-100 text-amber-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">MWF Afternoon</span>
+                        <h4 class="text-2xl font-bold text-stone-900 mt-5 mb-3">Pre-K Prep</h4>
+                        <p class="text-stone-600 text-sm mb-5 leading-relaxed">1 year prior to kindergarten. Must be 4 by first day of school.</p>
+                        <p class="text-stone-800 text-base font-bold flex items-center gap-2">🕒 12:30 PM - 3:00 PM</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-stone-100 flex items-end justify-between">
+                        <p class="text-3xl font-bold text-stone-950">$180 <span class="text-sm font-normal text-stone-500">/ month</span></p>
+                        <a href="tel:8018367904" class="text-sky-500 font-bold text-sm">Enroll</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100 flex flex-col justify-between transform transition hover:-translate-y-2 hover:shadow-xl">
+                    <div>
+                        <span class="bg-sky-100 text-sky-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">TTh Morning</span>
+                        <h4 class="text-2xl font-bold text-stone-900 mt-5 mb-3">Early Explorers</h4>
+                        <p class="text-stone-600 text-sm mb-5 leading-relaxed">2 years prior to kindergarten. Must be 3 by first day.</p>
+                        <p class="text-stone-800 text-base font-bold flex items-center gap-2">🕒 9:00 AM - 11:30 AM</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-stone-100 flex items-end justify-between">
+                        <p class="text-3xl font-bold text-stone-950">$150 <span class="text-sm font-normal text-stone-500">/ month</span></p>
+                        <a href="tel:8018367904" class="text-sky-500 font-bold text-sm">Enroll</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-100 flex flex-col justify-between transform transition hover:-translate-y-2 hover:shadow-xl">
+                    <div>
+                        <span class="bg-emerald-100 text-emerald-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">TTh Afternoon</span>
+                        <h4 class="text-2xl font-bold text-stone-900 mt-5 mb-3">Pre-K Prep</h4>
+                        <p class="text-stone-600 text-sm mb-5 leading-relaxed">1 year prior to kindergarten. Must be 4 by first day of school.</p>
+                        <p class="text-stone-800 text-base font-bold flex items-center gap-2">🕒 12:30 PM - 3:00 PM</p>
+                    </div>
+                    <div class="mt-8 pt-5 border-t border-stone-100 flex items-end justify-between">
+                        <p class="text-3xl font-bold text-stone-950">$140 <span class="text-sm font-normal text-stone-500">/ month</span></p>
+                        <a href="tel:8018367904" class="text-sky-500 font-bold text-sm">Enroll</a>
+                    </div>
+                </div>
+                <!-- End Class Cards -->
+            </div>
+            <div class="text-center mt-16">
+                <a href="tel:8018367904" class="bg-red-500 text-white font-bold px-10 py-5 rounded-full hover:bg-red-600 transition shadow-lg text-lg transform hover:-translate-y-0.5">
+                    Schedule a Tour for Your Child
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section (Cleaned up Grid) -->
+    <section id="staff" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="text-sky-600 font-bold text-sm tracking-widest uppercase">Our Faculty</span>
+            <h2 class="text-4xl sm:text-5xl font-bold text-stone-900">Meet Our Passionate Provo Teachers</h2>
+            <p class="text-stone-700 text-lg">
+                Experienced, certified local leaders committed to your child's developmental safety and happiness.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <!-- Miss Rebecca -->
+            <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm flex flex-col sm:flex-row gap-8 items-center transform transition hover:shadow-lg">
+                <img src="images/miss-rebecca-patchwork.jpg" alt="Miss Rebecca, owner and head teacher at Patchwork Preschool" class="w-36 h-36 rounded-full shrink-0 border-4 border-amber-300 object-cover shadow-md">
+                <div class="text-center sm:text-left">
+                    <h3 class="text-2xl font-bold text-stone-900">Miss Rebecca</h3>
+                    <p class="text-amber-500 font-semibold text-base mb-4">Owner / Head Teacher</p>
+                    <p class="text-stone-700 text-sm leading-relaxed">
+                        Teaching preschool in Provo since 2010. Holds a degree in Secondary Education from BYU and served proudly on the Provo City School District Board of Education for 8 years (2017 - 2024).
+                    </p>
+                </div>
+            </div>
+            <!-- Miss Cami -->
+            <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm flex flex-col sm:flex-row gap-8 items-center transform transition hover:shadow-lg">
+                <img src="images/miss-cami-patchwork.jpg" alt="Miss Cami, early childhood teacher at Patchwork Preschool" class="w-36 h-36 rounded-full shrink-0 border-4 border-sky-300 object-cover shadow-md">
+                <div class="text-center sm:text-left">
+                    <h3 class="text-2xl font-bold text-stone-900">Miss Cami</h3>
+                    <p class="text-sky-500 font-semibold text-base mb-4">Teacher</p>
+                    <p class="text-stone-700 text-sm leading-relaxed">
+                        Teaching at Patchwork since 2011. Certified CNA with an expansive background in youth medical fields, fitness, and early childhood nutrition development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple FAQ/Contact Section (New, for better conversions) -->
+    <section id="faq" class="bg-stone-900 text-stone-300 py-24 border-t-8 border-sky-400">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
             <div>
-                <h4 class="text-white text-lg font-bold mb-4">Quick Links</h4>
-                <ul class="space-y-2 text-sm">
+                <span class="text-sky-400 font-bold text-sm tracking-widest uppercase">FAQ</span>
+                <h2 class="text-4xl font-bold text-white mt-3 mb-10">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <details class="group bg-stone-800 p-6 rounded-2xl cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-white text-lg list-none">
+                            What age children do you accept?
+                            <span class="group-open:rotate-180 transition">▼</span>
+                        </summary>
+                        <p class="mt-4 text-stone-400 text-sm leading-relaxed">
+                            We accept children aged 3 to 5 years old. Our programs are designed to cover the critical developmental years leading up to kindergarten. Children must be 3 (Early Explorers) or 4 (Pre-K Prep) by the first day of school.
+                        </p>
+                    </details>
+                    <details class="group bg-stone-800 p-6 rounded-2xl cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-white text-lg list-none">
+                            Do you follow the local school district schedule?
+                            <span class="group-open:rotate-180 transition">▼</span>
+                        </summary>
+                        <p class="mt-4 text-stone-400 text-sm leading-relaxed">
+                            Yes, Patchwork Preschool generally follows the Provo City School District calendar for holidays, breaks, and professional development days, making scheduling easier for local families.
+                        </p>
+                    </details>
+                    <details class="group bg-stone-800 p-6 rounded-2xl cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold text-white text-lg list-none">
+                            What is your teaching philosophy?
+                            <span class="group-open:rotate-180 transition">▼</span>
+                        </summary>
+                        <p class="mt-4 text-stone-400 text-sm leading-relaxed">
+                            Our philosophy is rooted in traditional preschool structures where learning is active and hands-on. We focus on academic fundamentals like literacy and math while prioritizing social-emotional skills through intentional, joyful interaction.
+                        </p>
+                    </details>
+                </div>
+            </div>
+            
+            <div id="contact" class="bg-stone-800 p-10 rounded-3xl border border-stone-700 shadow-xl space-y-6">
+                <span class="text-amber-400 font-bold text-sm tracking-widest uppercase">Contact Us</span>
+                <h2 class="text-4xl font-bold text-white leading-tight">Ready to start the adventure?</h2>
+                <p class="text-stone-300 leading-relaxed">
+                    Contact us to check availability, schedule a personal tour of our Provo Pre-K classroom, or ask any other questions you may have. We look forward to meeting you!
+                </p>
+                <div class="space-y-3 pt-4 border-t border-stone-700">
+                    <p class="text-stone-100 text-lg flex items-center gap-3">📍 1084 West 990 North, Provo, UT 84604</p>
+                    <p class="text-stone-100 text-lg flex items-center gap-3">📞 Call / Text: (801) 836-7904</p>
+                </div>
+                <a href="tel:8018367904" class="block w-full bg-amber-400 text-stone-900 text-center font-bold px-8 py-4 rounded-full hover:bg-amber-500 transition text-lg mt-8">
+                    Call or Text Miss Rebecca
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer class="bg-black text-stone-400 pt-20 pb-10 border-t-4 border-amber-400">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
+            <div class="md:col-span-1">
+                 <a href="#" class="flex items-center gap-2 mb-5">
+                    <span class="text-3xl font-bold bg-gradient-to-r from-red-500 via-amber-500 to-sky-500 bg-clip-text text-transparent">Patchwork Preschool</span>
+                </a>
+                <p class="text-sm text-stone-400 mb-6 leading-relaxed">
+                    Traditional preschool structures & hands-on kindergarten prep for families in Provo, Orem, and Utah County. Where every child is a masterpiece.
+                </p>
+                <a href="https://instagram.com/patchworkpreschool" target="_blank" class="text-pink-400 hover:underline text-sm font-semibold flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.919-.058-1.265-.069-1.646-.069-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.2-4.363-2.618-6.78-6.98-6.98-1.28-.059-1.688-.073-4.947-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm5.113-11.758c.795 0 1.439-.643 1.439-1.438.016-.795-.628-1.438-1.438-1.438-1.077 0-1.721.643-1.721 1.438s.644 1.438 1.72 1.438z"></path></svg>
+                    📸 Follow on Instagram
+                </a>
+            </div>
+            
+            <div>
+                <h4 class="text-white text-lg font-bold mb-5">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
                     <li><a href="#about" class="hover:text-white transition">Our Core Pillars</a></li>
-                    <li><a href="#classes" class="hover:text-white transition">Class Times</a></li>
+                    <li><a href="#classes" class="hover:text-white transition">Class Schedules & Pricing</a></li>
                     <li><a href="#staff" class="hover:text-white transition">Our Faculty</a></li>
+                    <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
                 </ul>
             </div>
+             <div>
+                <h4 class="text-white text-lg font-bold mb-5">Contact</h4>
+                <div class="space-y-3 text-sm">
+                    <p>📍 1084 West 990 North,<br>Provo, UT 84604</p>
+                    <p>📞 Call / Text: (801) 836-7904</p>
+                    <p>📧 rebecca@patchworkpreschool.com</p>
+                </div>
+            </div>
+             <div>
+                <h4 class="text-white text-lg font-bold mb-5">Interactive Map</h4>
+                <!-- Replace with your actual Google Maps Embed if preferred, or keep the simple map image link from the design -->
+                 <a href="https://maps.app.goo.gl/9U1W5zR1fS9j2QZp9" target="_blank">
+                    <img src="images/patchwork-preschool-provo-map.png" alt="Map to Patchwork Preschool in Provo Utah" class="rounded-xl border-2 border-stone-800 shadow-lg hover:border-sky-500 transition">
+                 </a>
+            </div>
+
         </div>
-        <div class="max-w-7xl mx-auto px-6 pt-6 text-center text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 Patchwork Preschool. All rights reserved.</p>
-            <p>Designed for optimized local search and AI discovery.</p>
+        <div class="max-w-7xl mx-auto px-6 pt-8 text-center text-xs text-stone-600 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Patchwork Preschool. All rights reserved. Pre-K education in Provo, Utah.</p>
+            <p>Designed for optimized local search and AI discovery (GEO).</p>
         </div>
     </footer>
+
+    <!-- JavaScript for the Carousel -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const dots = document.querySelectorAll('.banner-dot');
+        const slideInterval = 6000; // Time in milliseconds (e.g., 6000 = 6 seconds)
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Automatic slide change
+        setInterval(nextSlide, slideInterval);
+
+        // Allow dots to jump to a specific slide
+        window.showSlide = showSlide;
+    </script>
 
 </body>
 </html>

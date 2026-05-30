@@ -550,112 +550,110 @@
         </div>
     </section>
 
- <section id="faq" class="py-24 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-blue-600 font-bold text-sm tracking-widest uppercase">Common Questions</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-900 tracking-tight mt-2">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-4" x-data="{ active: null }">
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
-                    <button @click="active = active === 1 ? null : 1" class="w-full px-6 py-5 text-left font-bold text-blue-900 flex justify-between items-center gap-4 hover:bg-slate-50/50 transition">
-                        <span>What are the age requirements for enrollment?</span>
-                        <span class="text-blue-500 font-bold text-xl transition-transform duration-200" :class="active === 1 ? 'rotate-45' : ''">+</span>
-                    </button>
-                    <div x-show="active === 1" x-collapse x-cloak>
-                        <div class="px-6 pb-5 text-slate-600 text-sm sm:text-base border-t border-slate-100 pt-3 leading-relaxed">
-                            Our traditional school-year preschool tracks are tailored for children ages 3 to 5. For our Summer Day Camp programs, we expand our activities to welcome children ages 3 up to 7 years old. All children must be fully potty-trained before their first day of attendance.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
-                    <button @click="active = active === 2 ? null : 2" class="w-full px-6 py-5 text-left font-bold text-blue-900 flex justify-between items-center gap-4 hover:bg-slate-50/50 transition">
-                        <span>What is your student-to-teacher ratio?</span>
-                        <span class="text-blue-500 font-bold text-xl transition-transform duration-200" :class="active === 2 ? 'rotate-45' : ''">+</span>
-                    </button>
-                    <div x-show="active === 2" x-collapse x-cloak>
-                        <div class="px-6 pb-5 text-slate-600 text-sm sm:text-base border-t border-slate-100 pt-3 leading-relaxed">
-                            We maintain strict small group dynamics to assure premium, direct safety and focused prep support. Our classroom features a ratio well below local guidelines, ensuring your child receives individualized attention during lesson windows and group activities.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
-                    <button @click="active = active === 3 ? null : 3" class="w-full px-6 py-5 text-left font-bold text-blue-900 flex justify-between items-center gap-4 hover:bg-slate-50/50 transition">
-                        <span>How do snack schedules and materials work?</span>
-                        <span class="text-blue-500 font-bold text-xl transition-transform duration-200" :class="active === 3 ? 'rotate-45' : ''">+</span>
-                    </button>
-                    <div x-show="active === 3" x-collapse x-cloak>
-                        <div class="px-6 pb-5 text-slate-600 text-sm sm:text-base border-t border-slate-100 pt-3 leading-relaxed">
-                            Everything your child needs is completely covered. Premium learning materials, seasonal crafting supplies, and healthy daily snacks are bundled directly into your base curriculum registration fees—no hidden supply list runarounds required.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
-                    <button @click="active = active === 4 ? null : 4" class="w-full px-6 py-5 text-left font-bold text-blue-900 flex justify-between items-center gap-4 hover:bg-slate-50/50 transition">
-                        <span>Can we schedule a physical classroom tour?</span>
-                        <span class="text-blue-500 font-bold text-xl transition-transform duration-200" :class="active === 4 ? 'rotate-45' : ''">+</span>
-                    </button>
-                    <div x-show="active === 4" x-collapse x-cloak>
-                        <div class="px-6 pb-5 text-slate-600 text-sm sm:text-base border-t border-slate-100 pt-3 leading-relaxed">
-                            Absolutely! We love hosting family walk-throughs. Reach out via our call or text line below, and we will find a convenient morning or afternoon window to introduce you to our instructors and show you our layout.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+ <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-3xl mx-auto text-center space-y-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start" x-data="{ active: null }">
                 
-                <div class="space-y-4">
-                    <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Start Your Child's Adventure?</h2>
-                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-                        Spaces are strictly limited to ensure personal focus for every student. Reach out today to secure your enrollment window or arrange an on-site classroom walkthrough!
-                    </p>
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Common Questions</span>
+                        <h2 class="text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
+                            <button @click="active = active === 1 ? null : 1" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                                <span class="text-sm sm:text-base">What are the age requirements for enrollment?</span>
+                                <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 1 ? 'rotate-45' : ''">+</span>
+                            </button>
+                            <div x-show="active === 1" x-collapse x-cloak>
+                                <div class="px-6 pb-5 text-slate-400 text-xs sm:text-sm border-t border-slate-700/40 pt-3 leading-relaxed">
+                                    Our traditional school-year preschool tracks are tailored for children ages 3 to 5. For our Summer Day Camp programs, we welcome children ages 3 up to 7 years old. All children must be fully potty-trained before their first day of attendance.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
+                            <button @click="active = active === 2 ? null : 2" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                                <span class="text-sm sm:text-base">What is your student-to-teacher ratio?</span>
+                                <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 2 ? 'rotate-45' : ''">+</span>
+                            </button>
+                            <div x-show="active === 2" x-collapse x-cloak>
+                                <div class="px-6 pb-5 text-slate-400 text-xs sm:text-sm border-t border-slate-700/40 pt-3 leading-relaxed">
+                                    We maintain strict small group dynamics to assure premium safety and focused prep support. Our classroom features a ratio well below local guidelines, ensuring your child receives individualized attention during lesson windows and group activities.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
+                            <button @click="active = active === 3 ? null : 3" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                                <span class="text-sm sm:text-base">How do snack schedules and materials work?</span>
+                                <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 3 ? 'rotate-45' : ''">+</span>
+                            </button>
+                            <div x-show="active === 3" x-collapse x-cloak>
+                                <div class="px-6 pb-5 text-slate-400 text-xs sm:text-sm border-t border-slate-700/40 pt-3 leading-relaxed">
+                                    Everything your child needs is completely covered. Premium learning materials, seasonal crafting supplies, and healthy daily snacks are bundled directly into your base curriculum registration fees—no hidden supply list runarounds required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
+                            <button @click="active = active === 4 ? null : 4" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                                <span class="text-sm sm:text-base">Can we schedule a physical classroom tour?</span>
+                                <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 4 ? 'rotate-45' : ''">+</span>
+                            </button>
+                            <div x-show="active === 4" x-collapse x-cloak>
+                                <div class="px-6 pb-5 text-slate-400 text-xs sm:text-sm border-t border-slate-700/40 pt-3 leading-relaxed">
+                                    Absolutely! We love hosting family walk-throughs. Reach out via our call or text line below, and we will find a convenient morning or afternoon window to introduce you to our instructors and show you our layout.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
-                    <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-5 rounded-2xl">
-                        <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a10.582 10.582 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Call or Text</div>
-                            <a href="tel:8018367904" class="text-sm sm:text-base font-bold hover:text-blue-400 transition whitespace-nowrap">(801) 836-7904</a>
-                        </div>
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Get In Touch</span>
+                        <h2 class="text-3xl font-extrabold tracking-tight">Ready to Start Your Child's Adventure?</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">Spaces are strictly limited to ensure personal focus for every student. Reach out today to secure your enrollment window or arrange an on-site walkthrough!</p>
                     </div>
 
-                    <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-5 rounded-2xl">
-                        <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium">Follow Us</div>
-                            <a href="https://www.facebook.com/pwpreschool" target="_blank" class="text-sm sm:text-base font-bold hover:text-blue-400 transition truncate block max-w-[160px]">pwpreschool</a>
-                        </div>
-                    </div>
-
-                    <a href="https://maps.google.com/?q=1084+West+990+North,+Provo,+UT+84604" target="_blank" class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-5 rounded-2xl hover:border-blue-500/80 transition group">
-                        <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0 group-hover:bg-blue-500/20 transition">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </div>
-                        <div>
-                            <div class="text-xs text-slate-400 font-medium flex items-center gap-1">
-                                <span>Location</span>
-                                <span class="text-blue-400 font-bold text-[10px] uppercase tracking-wider group-hover:underline">Maps ↗</span>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl">
+                            <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a10.582 10.582 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             </div>
-                            <span class="text-xs sm:text-sm font-bold text-slate-200 group-hover:text-blue-400 transition block leading-tight">1084 W 990 N<br>Provo, UT 84604</span>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium">Call or Text</div>
+                                <a href="tel:8018367904" class="text-base font-bold hover:text-blue-400 transition">(801) 836-7904</a>
+                            </div>
                         </div>
-                    </a>
+
+                        <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl">
+                            <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium">Follow Us</div>
+                                <a href="https://www.facebook.com/pwpreschool" target="_blank" class="text-base font-bold hover:text-blue-400 transition">facebook.com/pwpreschool</a>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=1084+West+990+North,+Provo,+UT+84604" target="_blank" class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl hover:border-blue-500 transition group">
+                            <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0 group-hover:bg-blue-500/20 transition">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400 font-medium flex items-center gap-1.5">
+                                    <span>Location</span>
+                                    <span class="text-blue-400 font-bold text-[10px] uppercase tracking-wider group-hover:underline">Open Maps ↗</span>
+                                </div>
+                                <span class="text-sm font-bold text-slate-200 group-hover:text-blue-400 transition">1084 West 990 North, Provo, UT 84604</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -801,3 +799,4 @@
         });
     </script>
 </body>
+</html>

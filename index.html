@@ -550,9 +550,13 @@
         </div>
     </section>
 
- <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+<section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
         
+        <style>
+            [x-cloak] { display: none !important; }
+        </style>
+
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start" x-data="{ active: null }">
                 
@@ -564,7 +568,7 @@
 
                     <div class="space-y-4">
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
-                            <button @click="active = active === 1 ? null : 1" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                            <button @click="active = active === 1 ? null : 1" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">What are the age requirements for enrollment?</span>
                                 <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 1 ? 'rotate-45' : ''">+</span>
                             </button>
@@ -576,7 +580,7 @@
                         </div>
 
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
-                            <button @click="active = active === 2 ? null : 2" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                            <button @click="active = active === 2 ? null : 2" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">What is your student-to-teacher ratio?</span>
                                 <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 2 ? 'rotate-45' : ''">+</span>
                             </button>
@@ -588,7 +592,7 @@
                         </div>
 
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
-                            <button @click="active = active === 3 ? null : 3" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                            <button @click="active = active === 3 ? null : 3" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">How do snack schedules and materials work?</span>
                                 <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 3 ? 'rotate-45' : ''">+</span>
                             </button>
@@ -600,7 +604,7 @@
                         </div>
 
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
-                            <button @click="active = active === 4 ? null : 4" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition">
+                            <button @click="active = active === 4 ? null : 4" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">Can we schedule a physical classroom tour?</span>
                                 <span class="text-blue-400 font-bold text-xl transition-transform duration-200" :class="active === 4 ? 'rotate-45' : ''">+</span>
                             </button>
@@ -703,6 +707,9 @@
         </div>
     </footer>
 
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <script>
         // Hero Banner Logic
         let currentSlide = 0;
@@ -732,9 +739,7 @@
             document.getElementById('scroll-marker-4')
         ];
 
-        // Global function to update layout view properties based on target pillar step index
         function updateShowcaseView(stepIndex) {
-            // Update Navigation Button States
             tabs.forEach(tab => {
                 const currentStep = parseInt(tab.getAttribute('data-step'));
                 const indicatorDot = tab.querySelector('span');
@@ -747,7 +752,6 @@
                 }
             });
 
-            // Update Left Column Info Panels (Slide up & Fade transitions)
             infoPanels.forEach((panel, idx) => {
                 if ((idx + 1) === stepIndex) {
                     panel.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
@@ -758,7 +762,6 @@
                 }
             });
 
-            // Update Right Column Media View (Z-index layering + opacity transition fade)
             panelImages.forEach((img, idx) => {
                 if ((idx + 1) === stepIndex) {
                     img.classList.remove('opacity-0', 'z-0');
@@ -770,7 +773,6 @@
             });
         }
 
-        // Click handler to instantly snap scroll frame to the target content track position
         window.scrollToStep = function(stepIndex) {
             const targetMarker = markers[stepIndex - 1];
             if (targetMarker) {
@@ -779,10 +781,9 @@
             }
         };
 
-        // Attach dynamic Intersection Observers to update views precisely as user scrolls down track
         const observerOptions = {
             root: null,
-            rootMargin: '-50% 0px -50% 0px', // Center-screen horizon execution trigger
+            rootMargin: '-50% 0px -50% 0px',
             threshold: 0
         };
 

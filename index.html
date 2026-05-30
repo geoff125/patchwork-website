@@ -550,13 +550,13 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+  <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <div class="space-y-8">
+                <div class="lg:col-span-5 space-y-8">
                     <div class="space-y-3">
                         <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Get In Touch</span>
                         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to Start Your Child's Adventure?</h2>
@@ -590,29 +590,31 @@
                             </div>
                             <div>
                                 <div class="text-xs text-slate-400 font-medium">Location</div>
-                                <span class="text-sm font-bold text-slate-200">Provo / Orem Area (Utah County)</span>
+                                <span class="text-sm font-bold text-slate-200">1084 West 990 North, Provo, UT 84604</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="relative w-full h-[320px] sm:h-[400px] rounded-[2.5rem] overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-800">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Patchwork+Preschool+Provo+Utah" target="_blank" class="absolute inset-0 block group z-20">
-                        <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-all duration-300 flex items-center justify-center">
-                            <span class="bg-blue-600 text-white font-bold text-xs px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
-                                Open in Google Maps ↗
-                            </span>
+                <div class="lg:col-span-7 w-full">
+                    <div class="relative w-full h-[350px] sm:h-[450px] rounded-[2.5rem] overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-800">
+                        <a href="https://maps.google.com/?q=1084+West+990+North,+Provo,+UT+84604" target="_blank" class="absolute inset-0 block group z-20">
+                            <div class="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/20 transition-all duration-300 flex items-center justify-center">
+                                <span class="bg-blue-600 text-white font-bold text-xs px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                                    Open in Google Maps ↗
+                                </span>
+                            </div>
+                        </a>
+                        <div class="absolute inset-0 w-full h-full opacity-80 mix-blend-luminosity pointer-events-none">
+                            <img src="images/Map location preview patchwork preschool.PNG" alt="Map graphic highlighting Provo service area locations" class="w-full h-full object-cover">
                         </div>
-                    </a>
-                    <div class="absolute inset-0 w-full h-full opacity-80 mix-blend-luminosity pointer-events-none">
-                        <img src="images/Map location preview patchwork preschool.PNG" alt="Map graphic highlighting Provo service area locations" class="w-full h-full object-cover">
                     </div>
                 </div>
 
             </div>
 
             <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                <div>&copy; 2026 Patchwork Preschool. All rights reserved.</div>
+                <div>© 2026 Patchwork Preschool. All rights reserved.</div>
                 <div class="flex gap-4">
                     <a href="https://www.facebook.com/pwpreschool" target="_blank" class="hover:text-slate-400 transition">Facebook</a>
                     <a href="#about" class="hover:text-slate-400 transition">Our Mission</a>
@@ -621,6 +623,7 @@
             </div>
         </div>
     </section>
+
     <footer class="bg-black text-slate-400 pt-20 pb-10 border-t-4 border-blue-600">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 pb-16 border-b border-slate-800">
             <div class="md:col-span-1">
@@ -645,7 +648,7 @@
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold mb-5">Interactive Map</h4>
-                 <a href="https://maps.app.goo.gl/9U1W5zR1fS9j2QZp9" target="_blank">
+                 <a href="https://maps.google.com/?q=1084+West+990+North,+Provo,+UT+84604" target="_blank">
                     <img src="images/patchwork-preschool-provo-map.png" alt="Map to Patchwork Preschool" class="rounded-xl border-2 border-slate-800 shadow-lg hover:border-sky-500 transition">
                  </a>
             </div>
@@ -661,6 +664,7 @@
         const slides = document.querySelectorAll('.carousel-item');
         const dots = document.querySelectorAll('.banner-dot');
         function showSlide(n) {
+            if (!slides.length) return;
             slides[currentSlide].classList.remove('opacity-100');
             slides[currentSlide].classList.add('opacity-0');
             dots[currentSlide].classList.remove('active');
@@ -669,7 +673,7 @@
             slides[currentSlide].classList.add('opacity-100');
             dots[currentSlide].classList.add('active');
         }
-        setInterval(() => showSlide(currentSlide + 1), 6000);
+        if (slides.length) setInterval(() => showSlide(currentSlide + 1), 6000);
         window.showSlide = showSlide;
 
         // Interactive Showcase Tab/Scroll Coupling Controller
@@ -738,6 +742,7 @@
         };
 
         markers.forEach((marker, index) => {
+            if (!marker) return;
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

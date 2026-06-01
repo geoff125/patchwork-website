@@ -142,12 +142,14 @@
 
    <section id="about" class="relative bg-slate-50">
         
+        <!-- Desktop Layout: Optimized spacing and larger headline -->
+        <!-- Reduced top spacing by targeting the sticky container alignment and flex container tracking -->
         <div class="hidden md:block relative h-[400vh] max-w-7xl mx-auto px-6">
-            <div class="sticky top-24 h-[calc(100vh-8rem)] flex flex-col justify-center py-4">
+            <div class="sticky top-16 h-[calc(100vh-6rem)] flex flex-col justify-center pt-2 pb-4">
                 
-                <div class="text-center max-w-2xl mx-auto mb-4">
-                    <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Our Mission</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-900">Building a Foundation of Learning Through</h2>
+                <!-- Removed "OUR MISSION" text and bumped title font size from text-2xl/text-3xl to text-4xl/text-5xl -->
+                <div class="text-center max-w-3xl mx-auto mb-6">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">Building a Foundation of Learning Through</h2>
                 </div>
 
                 <div class="flex justify-center mb-6">
@@ -214,11 +216,12 @@
             <div id="scroll-marker-4" class="absolute top-[300vh] h-[100vh] w-full pointer-events-none"></div>
         </div>
 
+        <!-- Mobile Layout: Realigned spacing and larger mobile font size -->
         <div class="block md:hidden px-4 pb-24 space-y-12">
             
-            <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-6 pb-4 z-40 text-center border-b border-slate-200/60">
-                <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Our Mission</span>
-                <h2 class="text-xl font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
+            <!-- Removed "OUR MISSION", reduced padding to pt-2, and increased font size to text-2xl -->
+            <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-2 pb-4 z-40 text-center border-b border-slate-200/60">
+                <h2 class="text-2xl font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
             </div>
 
             <div class="space-y-6 relative">

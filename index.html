@@ -140,16 +140,16 @@
         </div>
     </section>
 
-   <section id="about" class="relative bg-slate-50">
+  <section id="about" class="relative bg-slate-50 -mt-2">
         
-        <!-- Desktop Layout: Optimized spacing and larger headline -->
-        <!-- Reduced top spacing by targeting the sticky container alignment and flex container tracking -->
+        <!-- Desktop Layout: Maximized width and ultra-tightened spacing -->
         <div class="hidden md:block relative h-[400vh] max-w-7xl mx-auto px-6">
-            <div class="sticky top-16 h-[calc(100vh-6rem)] flex flex-col justify-center pt-2 pb-4">
+            <!-- Changed justify-center to justify-start and removed top padding to snap it upward -->
+            <div class="sticky top-12 h-[calc(100vh-4rem)] flex flex-col justify-start pt-0 pb-4">
                 
-                <!-- Removed "OUR MISSION" text and bumped title font size from text-2xl/text-3xl to text-4xl/text-5xl -->
-                <div class="text-center max-w-3xl mx-auto mb-6">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">Building a Foundation of Learning Through</h2>
+                <!-- Removed max-w-3xl and changed to max-w-7xl to match the image width above it -->
+                <div class="text-center max-w-7xl w-full mx-auto mb-4 mt-2">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-blue-900 leading-tight tracking-tight">Building a Foundation of Learning Through</h2>
                 </div>
 
                 <div class="flex justify-center mb-6">
@@ -173,7 +173,7 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[50vh] min-h-[380px] w-full relative">
+                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[52vh] min-h-[380px] w-full relative">
                     
                     <div class="relative h-full w-full flex items-center">
                         <div id="info-panel-1" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-100 translate-y-0 pointer-events-auto">
@@ -216,16 +216,13 @@
             <div id="scroll-marker-4" class="absolute top-[300vh] h-[100vh] w-full pointer-events-none"></div>
         </div>
 
-        <!-- Mobile Layout: Realigned spacing and larger mobile font size -->
+        <!-- Mobile Layout: Clean, flat structure -->
         <div class="block md:hidden px-4 pb-24 space-y-12">
-            
-            <!-- Removed "OUR MISSION", reduced padding to pt-2, and increased font size to text-2xl -->
-            <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-2 pb-4 z-40 text-center border-b border-slate-200/60">
-                <h2 class="text-2xl font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
+            <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-1 pb-3 z-40 text-center border-b border-slate-200/60">
+                <h2 class="text-2xl font-bold text-blue-900 mt-0">Building a Foundation of Learning Through</h2>
             </div>
 
             <div class="space-y-6 relative">
-                
                 <div class="sticky top-32 bg-white rounded-3xl border border-blue-100/80 shadow-lg overflow-hidden flex flex-col transition duration-300">
                     <div class="pt-6 px-6 pb-4">
                         <h4 class="text-xl font-bold text-blue-950">Individual Focus</h4>
@@ -285,7 +282,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
    </section>

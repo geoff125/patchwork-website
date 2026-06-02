@@ -7,7 +7,6 @@
     <meta name="description" content="Patchwork Preschool in Provo, Utah offers premier, affordable traditional Pre-K programs and exciting summer camps. Active, hands-on learning for Provo & Orem families.">
     <meta name="keywords" content="Provo Preschools, Preschools in Provo, Orem Preschools, Preschools in Orem, Utah Preschools, Utah county preschools, Preschools near me, pre-k preschools, traditional preschools, cheap preschools, best preschool in provo, summer camps provo, kids summer camps utah county">
     
-    <!-- Tailwind CSS v4 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,13 +64,11 @@
 </head>
 <body class="bg-sky-50/20 text-slate-800 antialiased">
 
-    <!-- Announcement Bar -->
     <div class="bg-blue-600 text-white text-center py-2 px-4 text-sm font-bold shadow-sm flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
         <span>🎨 Now Touring for Fall 2026 & Registering for Summer Camps!</span>
         <a href="tel:8018367904" class="underline hover:text-sky-200">Call or Text: (801) 836-7904</a>
     </div>
 
-    <!-- Header Navigation -->
     <header class="sticky top-0 bg-white/95 backdrop-blur-md shadow-md z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2">
@@ -93,9 +90,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 my-6">
-        <!-- Vertical layout scaled shorter on desktop screens (From 70vh to 52vh) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 mt-6 mb-2">
         <div class="relative bg-slate-900 h-[50vh] sm:h-[60vh] lg:h-[52vh] rounded-[2rem] shadow-xl overflow-hidden">
             <div id="hero-carousel" class="absolute inset-0 w-full h-full">
                 <div class="carousel-item absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000">
@@ -145,23 +140,18 @@
         </div>
     </section>
 
-    <!-- About / Our Mission Section -->
-    <!-- The padding-top here on desktop is reduced to exactly half (pt-12 instead of pt-24) to bring the mission closer to the hero -->
-    <section id="about" class="relative bg-slate-50 pt-6 lg:pt-12">
+    <section id="about" class="relative bg-slate-50 pt-2 lg:pt-4 pb-0">
         
-        <!-- Desktop Scroll Container (400vh tracking setup for scroll-coupling logic) -->
-        <div class="hidden md:block relative h-[400vh] max-w-7xl mx-auto px-6">
-            <!-- Adjusted layout height wrapper for a shorter, cleaner scrolling experience -->
-            <div class="sticky top-24 h-[calc(100vh-10rem)] flex flex-col justify-center py-2">
+        <div class="hidden md:block relative h-[380vh] max-w-7xl mx-auto px-6">
+            <div class="sticky top-20 h-[calc(100vh-8rem)] flex flex-col justify-center py-1">
                 
-                <div class="text-center max-w-4xl mx-auto mb-4">
-                    <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Our Mission</span>
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl lg:leading-normal font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
+                <div class="text-center max-w-5xl mx-auto mb-2">
+                    <span class="text-blue-600 font-bold text-sm lg:text-lg tracking-widest uppercase">Our Mission</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-5xl lg:leading-tight font-bold text-blue-900 mt-0.5">Building a Foundation of Learning Through</h2>
                 </div>
 
-                <div class="flex justify-center mb-6">
-                    <!-- Expanded bar layout structure with larger padding targets and wider flex distributions -->
-                    <div id="showcase-tabs" class="inline-flex justify-center gap-2 bg-slate-200/80 p-2 rounded-full border border-slate-300/60 shadow-inner w-full max-w-5xl overflow-x-auto no-scrollbar">
+                <div class="flex justify-center mb-4">
+                    <div id="showcase-tabs" class="inline-flex justify-center gap-2 bg-slate-200/80 p-1.5 rounded-full border border-slate-300/60 shadow-inner w-full max-w-5xl overflow-x-auto no-scrollbar">
                         <button onclick="scrollToStep(1)" data-step="1" class="showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 bg-blue-600 text-white shadow-sm">
                             <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
                             Individual Focus
@@ -181,37 +171,35 @@
                     </div>
                 </div>
 
-                <!-- Lowered container frame layout height down from 50vh to 42vh to keep structural picture ratios shorter -->
-                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[42vh] min-h-[340px] w-full relative">
+                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[32vh] min-h-[280px] w-full relative">
                     
                     <div class="relative h-full w-full flex items-center">
-                        <div id="info-panel-1" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-100 translate-y-0 pointer-events-auto">
+                        <div id="info-panel-1" class="showcase-info-panel bg-white rounded-[2rem] p-6 shadow-md border border-blue-100/50 space-y-3 absolute inset-x-0 transition-all duration-500 opacity-100 translate-y-0 pointer-events-auto">
                             <h4 class="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-950 leading-tight">Individual Focus</h4>
                             <p class="text-slate-600 text-sm lg:text-base leading-relaxed">We believe every early learner is highly important and requires specialized attention. Our small group dynamic ensures our certified childhood instructors map daily curriculum speeds to your child's unique emotional and cognitive milestones.</p>
-                            <a href="#contact" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-md mt-1">Learn About Specialized Attention</a>
+                            <a href="#contact" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-sm mt-0.5">Learn About Specialized Attention</a>
                         </div>
 
-                        <div id="info-panel-2" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
+                        <div id="info-panel-2" class="showcase-info-panel bg-white rounded-[2rem] p-6 shadow-md border border-blue-100/50 space-y-3 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
                             <h4 class="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-950 leading-tight">Teaching Core Subjects</h4>
                             <p class="text-slate-600 text-sm lg:text-base leading-relaxed">Our balanced preparatory academic curriculum focuses on age-appropriate reading, early writing development, foundational mathematics, introductory science, music, art, and vital peer-to-peer social skills.</p>
-                            <a href="#classes" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-md mt-1">View Pre-K Schedules</a>
+                            <a href="#classes" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-sm mt-0.5">View Pre-K Schedules</a>
                         </div>
 
-                        <div id="info-panel-3" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
+                        <div id="info-panel-3" class="showcase-info-panel bg-white rounded-[2rem] p-6 shadow-md border border-blue-100/50 space-y-3 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
                             <h4 class="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-950 leading-tight">Hands-On Learning</h4>
                             <p class="text-slate-600 text-sm lg:text-base leading-relaxed">We passionately advocate for traditional "learning by doing." We empower active preschool students through a rich variety of immersive, tactile sensory experiences, cooperative play setups, and custom discovery projects.</p>
-                            <a href="#camps" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-md mt-1">Explore Summer Programming</a>
+                            <a href="#camps" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-sm mt-0.5">Explore Summer Programming</a>
                         </div>
 
-                        <div id="info-panel-4" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
+                        <div id="info-panel-4" class="showcase-info-panel bg-white rounded-[2rem] p-6 shadow-md border border-blue-100/50 space-y-3 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
                             <h4 class="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-950 leading-tight">Safety & Wellness</h4>
                             <p class="text-slate-600 text-sm lg:text-base leading-relaxed">Every square inch of our classroom facility balances stringent clinical hygiene tracking and continuous direct safety monitoring to give local parents complete structural peace of mind.</p>
-                            <a href="tel:8018367904" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-md mt-1">Schedule Site Visit</a>
+                            <a href="tel:8018367904" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-sm mt-0.5">Schedule Site Visit</a>
                         </div>
                     </div>
 
-                    <!-- Asymmetric corner profiles applied to shortened desktop display masks -->
-                    <div class="relative w-full h-full rounded-tl-[8rem] rounded-br-[8rem] overflow-hidden shadow-md border border-slate-100 bg-slate-100">
+                    <div id="showcase-image-frame" class="relative w-full h-full overflow-hidden shadow-md border border-slate-100 bg-slate-100 transition-all duration-700 rounded-tl-[6rem] rounded-br-[6rem]">
                         <img id="info-img-1" src="images/Love learning at Patchwork preschool.JPG" alt="Children reading books" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 z-10">
                         <img id="info-img-2" src="images/Best Preschools in Provo.JPG" alt="Experienced teachers in classroom environment" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0">
                         <img id="info-img-3" src="images/Top preschool in utah valley.JPG" alt="Structured kindergarten preparatory assignments" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0">
@@ -220,23 +208,18 @@
                 </div>
             </div>
 
-            <!-- Absolute Tracking Targets (Required for smooth programmatic tracking functions) -->
             <div id="scroll-marker-1" class="absolute top-0 h-[100vh] w-full pointer-events-none"></div>
             <div id="scroll-marker-2" class="absolute top-[100vh] h-[100vh] w-full pointer-events-none"></div>
             <div id="scroll-marker-3" class="absolute top-[200vh] h-[100vh] w-full pointer-events-none"></div>
             <div id="scroll-marker-4" class="absolute top-[300vh] h-[100vh] w-full pointer-events-none"></div>
         </div>
 
-        <!-- Mobile Layout Stack (Unchanged) -->
         <div class="block md:hidden px-4 pb-24 space-y-12">
-            
             <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-6 pb-4 z-40 text-center border-b border-slate-200/60">
                 <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Our Mission</span>
                 <h2 class="text-xl font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
             </div>
-
             <div class="space-y-6 relative">
-                
                 <div class="sticky top-32 bg-white rounded-3xl border border-blue-100/80 shadow-lg overflow-hidden flex flex-col transition duration-300">
                     <div class="pt-6 px-6 pb-4">
                         <h4 class="text-xl font-bold text-blue-950">Individual Focus</h4>
@@ -251,7 +234,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="sticky top-[8.5rem] bg-white rounded-3xl border border-blue-100/80 shadow-lg overflow-hidden flex flex-col transition duration-300">
                     <div class="pt-6 px-6 pb-4">
                         <h4 class="text-xl font-bold text-blue-950">Teaching Core Subjects</h4>
@@ -266,7 +248,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="sticky top-[9rem] bg-white rounded-3xl border border-blue-100/80 shadow-lg overflow-hidden flex flex-col transition duration-300">
                     <div class="pt-6 px-6 pb-4">
                         <h4 class="text-xl font-bold text-blue-950">Hands-On Learning</h4>
@@ -281,7 +262,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="sticky top-[9.5rem] bg-white rounded-3xl border border-blue-100/80 shadow-lg overflow-hidden flex flex-col transition duration-300">
                     <div class="pt-6 px-6 pb-4">
                         <h4 class="text-xl font-bold text-blue-950">Safety & Wellness</h4>
@@ -296,18 +276,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Classes & Pricing Section -->
-    <!-- Reduced top padding on desktop from py-24 to pt-4 pb-20 to pull up the pricing cards closer to the mission pictures -->
-    <section id="classes" class="pt-4 pb-20 lg:pt-6 bg-slate-50">
+    <section id="classes" class="pt-2 pb-12 lg:pt-4 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 
-                <!-- Card 1 -->
                 <div class="bg-white rounded-3xl p-8 border-2 border-blue-100 flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-300">
                     <div class="space-y-5">
                         <div>
@@ -331,7 +307,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="bg-white rounded-3xl p-8 border-2 border-sky-100 flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-300">
                     <div class="space-y-5">
                         <div>
@@ -355,7 +330,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="bg-white rounded-3xl p-8 border-2 border-emerald-100 flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-300">
                     <div class="space-y-5">
                         <div>
@@ -379,7 +353,6 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="bg-white rounded-3xl p-8 border-2 border-amber-100 flex flex-col justify-between shadow-xs hover:shadow-lg transition duration-300">
                     <div class="space-y-5">
                         <div>
@@ -407,16 +380,13 @@
         </div>
     </section>
 
-    <!-- Summer Camps Section -->
-    <section id="camps" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 space-y-16">
+    <section id="camps" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="grid grid-cols-1 justify-items-center text-center lg:text-left lg:justify-items-start lg:col-span-8 space-y-8 w-full">
+                <div class="grid grid-cols-1 justify-items-center text-center lg:text-left lg:justify-items-start lg:col-span-8 space-y-6 w-full">
                     
                     <div class="space-y-2">
-                        <!-- Upgraded sub-header tracking font scales up larger on desktop views -->
                         <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Summer Programming</span>
-                        <!-- Main heading updated with custom lg text sizes for wider prominence -->
                         <h2 class="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-blue-900 tracking-tight leading-tight">
                             Summer Day Camps: Adventure Awaits!
                         </h2>
@@ -439,7 +409,7 @@
                         Keep the learning, playing, and socializing alive all summer! Designed for kids **ages 3–7**, our seasonal camps balance curiosity with active learning. Choose between **Morning (9:00 AM - 12:00 PM)** or **Afternoon (1:00 PM - 4:00 PM)** windows for any session theme.
                     </p>
 
-                    <div class="w-full flex justify-center lg:justify-start pt-2">
+                    <div class="w-full flex justify-center lg:justify-start pt-1">
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0" target="_blank" class="inline-block bg-blue-600 text-white font-bold text-base px-8 py-3.5 rounded-full hover:bg-blue-700 transition shadow-md hover:shadow-lg">
                             Sign Up Here
                         </a>
@@ -454,18 +424,15 @@
                 </div>
             </div>
 
-            <hr class="border-slate-100 my-4" />
+            <hr class="border-slate-100 my-2" />
 
-            <!-- Day Camp Grid -->
-            <div class="space-y-12">
+            <div class="space-y-8">
                 <div class="text-center md:text-left max-w-2xl">
                     <h3 class="text-2xl font-bold text-blue-900">Select From Our 8 Day Camp Options:</h3>
                     <p class="text-slate-500 text-sm mt-1">Click the "Sign Up Here" button above to reserve slots for specific dates inside our secure parent registration portal.</p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                    
-                    <!-- June 2nd -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 2nd</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-50/80 rounded-full flex items-center justify-center p-3 shadow-inner border border-blue-100/70 hover:scale-105 transition duration-300 block">
@@ -474,7 +441,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Backyard Safari</h4>
                     </div>
 
-                    <!-- June 4th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 4th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-100 rounded-full flex items-center justify-center text-5xl shadow-inner border border-blue-200 hover:scale-105 transition duration-300 block select-none">
@@ -483,7 +449,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Messy Art Madness</h4>
                     </div>
 
-                    <!-- June 9th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 9th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-100 rounded-full flex items-center justify-center text-5xl shadow-inner border border-blue-200 hover:scale-105 transition duration-300 block select-none">
@@ -492,7 +457,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Camping Adventure</h4>
                     </div>
 
-                    <!-- June 11th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 11th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-50/80 rounded-full flex items-center justify-center p-3 shadow-inner border border-blue-100/70 hover:scale-105 transition duration-300 block">
@@ -501,7 +465,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Superhero Training</h4>
                     </div>
 
-                    <!-- June 16th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 16th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-100 rounded-full flex items-center justify-center text-5xl shadow-inner border border-blue-200 hover:scale-105 transition duration-300 block select-none">
@@ -510,7 +473,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Summer Science Splash</h4>
                     </div>
 
-                    <!-- June 18th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 18th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-50/80 rounded-full flex items-center justify-center p-3 shadow-inner border border-blue-100/70 hover:scale-105 transition duration-300 block">
@@ -519,7 +481,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Music Makers Party</h4>
                     </div>
 
-                    <!-- June 23rd -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 23rd</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-100 rounded-full flex items-center justify-center text-5xl shadow-inner border border-blue-200 hover:scale-105 transition duration-300 block select-none">
@@ -528,7 +489,6 @@
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Anything But a Box</h4>
                     </div>
 
-                    <!-- June 25th -->
                     <div class="bg-slate-50/50 rounded-2xl p-6 border border-slate-200 flex flex-col items-center text-center shadow-xs hover:shadow-md transition duration-300">
                         <span class="bg-blue-100 text-blue-900 text-base font-extrabold tracking-wide px-4 py-1 rounded-full uppercase">June 25th</span>
                         <a href="https://zig.kids/company/1b601de9-1d90-46d9-a928-188a1a008df0/activities" target="_blank" class="w-24 h-24 my-6 bg-blue-100 rounded-full flex items-center justify-center text-5xl shadow-inner border border-blue-200 hover:scale-105 transition duration-300 block select-none">
@@ -536,27 +496,20 @@
                         </a>
                         <h4 class="text-xl font-bold text-blue-900 min-h-[3.5rem] flex items-center">Shadow & Light Lab</h4>
                     </div>
-
                 </div>
 
-                <!-- Shortened padding tracks applied underneath this bottom info box alert layer (From mt-12 to mt-6) -->
-                <div class="mt-6 max-w-3xl mx-auto bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 text-sm text-blue-950">
+                <div class="mt-4 max-w-3xl mx-auto bg-slate-50 rounded-2xl p-5 text-center border border-slate-200 text-sm text-blue-950">
                     💡 <strong>Camp Schedule Details:</strong> Drop-off classes run individually across the dates listed above. Snacks and materials are fully bundled with your registration.
                 </div>
             </div>
-
         </div>
     </section>
                
-    <!-- Meet Our Staff Section -->
-    <!-- Reduced top padding from py-24 to pt-8 pb-20 on desktop to pull the section up closer to the camp information box -->
-    <section id="staff" class="pt-8 pb-20 max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <!-- Faculty sub-label tags scaled up on wider desktop views -->
-            <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Our Faculty</span>
-            <!-- Faculty header updated with custom lg text sizes for wider prominence -->
+    <section id="staff" class="pt-4 pb-16 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-10 space-y-2">
+            <span class="text-blue-600 font-bold text-sm lg:text-lg tracking-widest uppercase">Our Faculty</span>
             <h2 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-blue-900">Meet Our Teachers</h2>
-            <p class="text-slate-700 text-lg">Experienced, certified local leaders committed to your child's developmental safety and happiness.</p>
+            <p class="text-slate-700 text-base">Experienced, certified local leaders committed to your child's developmental safety and happiness.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm flex flex-col sm:flex-row gap-8 items-center transform transition hover:shadow-lg">
@@ -578,7 +531,6 @@
         </div>
     </section>
 
-    <!-- Contact & FAQ Combo Section -->
     <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.15),transparent_50%)]"></div>
         <style>
@@ -588,7 +540,6 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start" x-data="{ active: null }">
                 
-                <!-- Left Column: FAQ Accordion -->
                 <div id="faq" class="lg:col-span-7 space-y-8">
                     <div class="space-y-3">
                         <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Common Questions</span>
@@ -596,7 +547,6 @@
                     </div>
 
                     <div class="space-y-4">
-                        <!-- FAQ Item 1 -->
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
                             <button @click="active = active === 1 ? null : 1" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">What are the age requirements for enrollment?</span>
@@ -611,7 +561,6 @@
                             </div>
                         </div>
 
-                        <!-- FAQ Item 2 -->
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
                             <button @click="active = active === 2 ? null : 2" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">What is your student-to-teacher ratio?</span>
@@ -626,7 +575,6 @@
                             </div>
                         </div>
 
-                        <!-- FAQ Item 3 -->
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
                             <button @click="active = active === 3 ? null : 3" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">How do snack schedules and materials work?</span>
@@ -641,7 +589,6 @@
                             </div>
                         </div>
 
-                        <!-- FAQ Item 4 -->
                         <div class="bg-slate-800/40 rounded-2xl border border-slate-700/50 overflow-hidden">
                             <button @click="active = active === 4 ? null : 4" class="w-full px-6 py-5 text-left font-bold text-slate-100 flex justify-between items-center gap-4 hover:bg-slate-800/70 transition cursor-pointer select-none">
                                 <span class="text-sm sm:text-base">Can we schedule a physical classroom tour?</span>
@@ -658,7 +605,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Contact Details & Socials -->
                 <div class="lg:col-span-5 space-y-8">
                     <div class="space-y-3">
                         <span class="text-blue-400 font-bold text-xs tracking-widest uppercase">Get In Touch</span>
@@ -667,7 +613,6 @@
                     </div>
 
                     <div class="flex flex-col gap-4">
-                        <!-- Row 1: Call / Text Item -->
                         <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl">
                             <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a10.582 10.582 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -678,7 +623,6 @@
                             </div>
                         </div>
 
-                        <!-- Row 2: Email Item -->
                         <div class="flex items-center gap-4 bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl">
                             <div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -689,7 +633,6 @@
                             </div>
                         </div>
 
-                        <!-- Row 3: Social Media Links -->
                         <div class="flex items-center justify-between bg-slate-800/50 border border-slate-700/40 p-4 rounded-2xl">
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 shrink-0">
@@ -700,14 +643,12 @@
                                     <div class="text-sm font-bold text-slate-200">Follow Our Updates</div>
                                 </div>
                             </div>
-                            
                             <div class="flex items-center gap-4 pr-2">
                                 <a href="https://www.facebook.com/pwpreschool" target="_blank" class="hover:scale-110 transition duration-200" title="Visit Facebook Page">
                                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="#1877F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                                     </svg>
                                 </a>
-                                
                                 <a href="https://www.instagram.com/patchworkpreschool/" target="_blank" class="hover:scale-110 transition duration-200" title="Visit Instagram Profile">
                                     <svg class="w-8 h-8" viewBox="0 0 24 24">
                                         <defs>
@@ -733,7 +674,6 @@
 
             </div>
 
-            <!-- Internal Section Footer -->
             <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                 <div>© 2026 Patchwork Preschool. All rights reserved.</div>
                 <div class="flex gap-4">
@@ -746,7 +686,6 @@
         </div>
     </section>
 
-    <!-- Consolidated Main Footer Section -->
     <footer class="bg-black text-slate-400 pt-20 pb-10 border-t-4 border-blue-600">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 pb-16 border-b border-slate-800">
             <div class="md:col-span-1">
@@ -767,7 +706,7 @@
             <div>
                 <h4 class="text-white text-lg font-bold mb-5">Contact Us</h4>
                 <div class="space-y-3 text-sm">
-                    <a href="https://www.google.com/maps/search/?api=1&query=1084+West+990+North,+Provo,+UT+84604" target="_blank" class="block hover:text-white transition group">
+                    <a href="http://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank" class="block hover:text-white transition group">
                         <span class="block text-slate-400 group-hover:text-blue-400 transition">📍 1084 West 990 North,<br>Provo, UT 84604</span>
                     </a>
                     <p class="block pt-1">📞 Call / Text: (801) 836-7904</p>
@@ -776,7 +715,7 @@
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold mb-5">Interactive Map</h4>
-                 <a href="https://maps.google.com/?q=1084+West+990+North,+Provo,+UT+84604" target="_blank">
+                 <a href="http://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank">
                     <img src="images/patchwork-preschool-provo-map.png" alt="Map to Patchwork Preschool" class="rounded-xl border-2 border-slate-800 shadow-lg hover:border-sky-500 transition w-full max-w-[280px] md:max-w-none mx-auto">
                  </a>
             </div>
@@ -786,7 +725,6 @@
         </div>
     </footer>
 
-    <!-- Alpine.js Core Libraries -->
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -808,10 +746,11 @@
         if (slides.length) setInterval(() => showSlide(currentSlide + 1), 6000);
         window.showSlide = showSlide;
 
-        // Desktop Showcase Scroll-Coupling Script Layout Logic
+        // Desktop Showcase Script Layout & Shape-shifting Logic
         const tabs = document.querySelectorAll('.showcase-tab-btn');
         const infoPanels = document.querySelectorAll('.showcase-info-panel');
         const panelImages = document.querySelectorAll('.showcase-panel-img');
+        const imageFrame = document.getElementById('showcase-image-frame');
         const markers = [
             document.getElementById('scroll-marker-1'),
             document.getElementById('scroll-marker-2'),
@@ -851,6 +790,15 @@
                     img.classList.add('opacity-0', 'z-0');
                 }
             });
+
+            // Dynamically flip the geometric leaf boundaries based on step parity indices
+            if (imageFrame) {
+                if (stepIndex % 2 === 0) {
+                    imageFrame.className = "relative w-full h-full overflow-hidden shadow-md border border-slate-100 bg-slate-100 transition-all duration-700 rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-none rounded-br-none";
+                } else {
+                    imageFrame.className = "relative w-full h-full overflow-hidden shadow-md border border-slate-100 bg-slate-100 transition-all duration-700 rounded-tl-[6rem] rounded-br-[6rem] rounded-tr-none rounded-bl-none";
+                }
+            }
         }
 
         window.scrollToStep = function(stepIndex) {

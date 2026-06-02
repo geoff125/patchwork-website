@@ -95,7 +95,8 @@
 
     <!-- Hero Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 my-6">
-        <div class="relative bg-slate-900 h-[50vh] sm:h-[60vh] lg:h-[70vh] rounded-[2rem] shadow-xl overflow-hidden">
+        <!-- Vertical layout scaled shorter on desktop screens (From 70vh to 52vh) -->
+        <div class="relative bg-slate-900 h-[50vh] sm:h-[60vh] lg:h-[52vh] rounded-[2rem] shadow-xl overflow-hidden">
             <div id="hero-carousel" class="absolute inset-0 w-full h-full">
                 <div class="carousel-item absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000">
                     <img src="images/Orem Preschool Playing.JPG" alt="Children playing together" class="w-full h-full object-cover">
@@ -145,39 +146,43 @@
     </section>
 
     <!-- About / Our Mission Section -->
-    <section id="about" class="relative bg-slate-50">
+    <!-- The padding-top here on desktop is reduced to exactly half (pt-12 instead of pt-24) to bring the mission closer to the hero -->
+    <section id="about" class="relative bg-slate-50 pt-6 lg:pt-12">
         
         <!-- Desktop Scroll Container (400vh tracking setup for scroll-coupling logic) -->
         <div class="hidden md:block relative h-[400vh] max-w-7xl mx-auto px-6">
-            <div class="sticky top-24 h-[calc(100vh-8rem)] flex flex-col justify-center py-4">
+            <!-- Adjusted layout height wrapper for a shorter, cleaner scrolling experience -->
+            <div class="sticky top-24 h-[calc(100vh-10rem)] flex flex-col justify-center py-2">
                 
-                <div class="text-center max-w-2xl mx-auto mb-4">
-                    <span class="text-blue-600 font-bold text-xs tracking-widest uppercase">Our Mission</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-900">Building a Foundation of Learning Through</h2>
+                <div class="text-center max-w-4xl mx-auto mb-4">
+                    <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Our Mission</span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl lg:leading-normal font-bold text-blue-900 mt-1">Building a Foundation of Learning Through</h2>
                 </div>
 
                 <div class="flex justify-center mb-6">
-                    <div id="showcase-tabs" class="inline-flex justify-center gap-1 bg-slate-200/80 p-1.5 rounded-full border border-slate-300/60 shadow-inner max-w-full overflow-x-auto no-scrollbar">
-                        <button onclick="scrollToStep(1)" data-step="1" class="showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 bg-blue-600 text-white shadow-sm">
-                            <span class="w-2 h-2 rounded-full bg-white"></span>
+                    <!-- Expanded bar layout structure with larger padding targets and wider flex distributions -->
+                    <div id="showcase-tabs" class="inline-flex justify-center gap-2 bg-slate-200/80 p-2 rounded-full border border-slate-300/60 shadow-inner w-full max-w-5xl overflow-x-auto no-scrollbar">
+                        <button onclick="scrollToStep(1)" data-step="1" class="showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 bg-blue-600 text-white shadow-sm">
+                            <span class="w-2.5 h-2.5 rounded-full bg-white"></span>
                             Individual Focus
                         </button>
-                        <button onclick="scrollToStep(2)" data-step="2" class="showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
-                            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                        <button onclick="scrollToStep(2)" data-step="2" class="showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
+                            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                             Teaching Core Subjects
                         </button>
-                        <button onclick="scrollToStep(3)" data-step="3" class="showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
-                            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                        <button onclick="scrollToStep(3)" data-step="3" class="showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
+                            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                             Hands-On Learning
                         </button>
-                        <button onclick="scrollToStep(4)" data-step="4" class="showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
-                            <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                        <button onclick="scrollToStep(4)" data-step="4" class="showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600">
+                            <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
                             Safety & Wellness
                         </button>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[50vh] min-h-[380px] w-full relative">
+                <!-- Lowered container frame layout height down from 50vh to 42vh to keep structural picture ratios shorter -->
+                <div class="grid grid-cols-2 gap-6 lg:gap-10 items-center h-[42vh] min-h-[340px] w-full relative">
                     
                     <div class="relative h-full w-full flex items-center">
                         <div id="info-panel-1" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-xl border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-100 translate-y-0 pointer-events-auto">
@@ -205,7 +210,8 @@
                         </div>
                     </div>
 
-                    <div class="relative w-full h-full rounded-[2rem] overflow-hidden shadow-md border border-slate-100 bg-slate-100">
+                    <!-- Asymmetric corner profiles applied to shortened desktop display masks -->
+                    <div class="relative w-full h-full rounded-tl-[8rem] rounded-br-[8rem] overflow-hidden shadow-md border border-slate-100 bg-slate-100">
                         <img id="info-img-1" src="images/Love learning at Patchwork preschool.JPG" alt="Children reading books" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 z-10">
                         <img id="info-img-2" src="images/Best Preschools in Provo.JPG" alt="Experienced teachers in classroom environment" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0">
                         <img id="info-img-3" src="images/Top preschool in utah valley.JPG" alt="Structured kindergarten preparatory assignments" class="showcase-panel-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0">
@@ -221,7 +227,7 @@
             <div id="scroll-marker-4" class="absolute top-[300vh] h-[100vh] w-full pointer-events-none"></div>
         </div>
 
-        <!-- Mobile Layout Stack -->
+        <!-- Mobile Layout Stack (Unchanged) -->
         <div class="block md:hidden px-4 pb-24 space-y-12">
             
             <div class="sticky top-0 bg-slate-50/95 backdrop-blur-md pt-6 pb-4 z-40 text-center border-b border-slate-200/60">
@@ -296,7 +302,8 @@
     </section>
 
     <!-- Classes & Pricing Section -->
-    <section id="classes" class="py-24 bg-slate-50">
+    <!-- Reduced top padding on desktop from py-24 to pt-4 pb-20 to pull up the pricing cards closer to the mission pictures -->
+    <section id="classes" class="pt-4 pb-20 lg:pt-6 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                 
@@ -407,8 +414,10 @@
                 <div class="grid grid-cols-1 justify-items-center text-center lg:text-left lg:justify-items-start lg:col-span-8 space-y-8 w-full">
                     
                     <div class="space-y-2">
-                        <span class="text-blue-600 font-bold text-sm tracking-widest uppercase">Summer Programming</span>
-                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-blue-900 tracking-tight leading-tight">
+                        <!-- Upgraded sub-header tracking font scales up larger on desktop views -->
+                        <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Summer Programming</span>
+                        <!-- Main heading updated with custom lg text sizes for wider prominence -->
+                        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-blue-900 tracking-tight leading-tight">
                             Summer Day Camps: Adventure Awaits!
                         </h2>
                     </div>
@@ -530,7 +539,8 @@
 
                 </div>
 
-                <div class="mt-12 max-w-3xl mx-auto bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 text-sm text-blue-950">
+                <!-- Shortened padding tracks applied underneath this bottom info box alert layer (From mt-12 to mt-6) -->
+                <div class="mt-6 max-w-3xl mx-auto bg-slate-50 rounded-2xl p-6 text-center border border-slate-200 text-sm text-blue-950">
                     💡 <strong>Camp Schedule Details:</strong> Drop-off classes run individually across the dates listed above. Snacks and materials are fully bundled with your registration.
                 </div>
             </div>
@@ -539,10 +549,13 @@
     </section>
                
     <!-- Meet Our Staff Section -->
-    <section id="staff" class="py-24 max-w-7xl mx-auto px-6">
+    <!-- Reduced top padding from py-24 to pt-8 pb-20 on desktop to pull the section up closer to the camp information box -->
+    <section id="staff" class="pt-8 pb-20 max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span class="text-blue-600 font-bold text-sm tracking-widest uppercase">Our Faculty</span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-blue-900">Meet Our Teachers</h2>
+            <!-- Faculty sub-label tags scaled up on wider desktop views -->
+            <span class="text-blue-600 font-bold text-sm lg:text-base tracking-widest uppercase">Our Faculty</span>
+            <!-- Faculty header updated with custom lg text sizes for wider prominence -->
+            <h2 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-blue-900">Meet Our Teachers</h2>
             <p class="text-slate-700 text-lg">Experienced, certified local leaders committed to your child's developmental safety and happiness.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -811,11 +824,11 @@
                 const currentStep = parseInt(tab.getAttribute('data-step'));
                 const indicatorDot = tab.querySelector('span');
                 if (currentStep === stepIndex) {
-                    tab.className = "showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap transition-all duration-300 bg-blue-600 text-white shadow-sm";
-                    if(indicatorDot) indicatorDot.className = "w-2 h-2 rounded-full bg-white";
+                    tab.className = "showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-xs md:text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 bg-blue-600 text-white shadow-sm";
+                    if(indicatorDot) indicatorDot.className = "w-2.5 h-2.5 rounded-full bg-white";
                 } else {
-                    tab.className = "showcase-tab-btn flex items-center gap-2 rounded-full px-4 py-2.5 text-xs md:text-sm font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600";
-                    if(indicatorDot) indicatorDot.className = "w-2 h-2 rounded-full bg-slate-400";
+                    tab.className = "showcase-tab-btn flex-1 flex justify-center items-center gap-2 rounded-full px-6 py-3 text-xs md:text-sm lg:text-base font-semibold whitespace-nowrap transition-all duration-300 text-slate-700 hover:text-blue-600";
+                    if(indicatorDot) indicatorDot.className = "w-2.5 h-2.5 rounded-full bg-slate-400";
                 }
             });
 

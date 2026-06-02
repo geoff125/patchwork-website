@@ -24,6 +24,15 @@
         /* Hide scrollbars but preserve functionality within the track */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /*
+         * Camp visibility toggle:
+         * - To hide all camp-related content in July, add "camps-closed" to the <body> class.
+         * - To show camps again in January, remove "camps-closed" from the <body> class.
+         */
+        body.camps-closed [data-camp] {
+            display: none !important;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -62,10 +71,16 @@
     }
     </script>
 </head>
+<!--
+    Camp toggle instructions:
+    - Camps visible: keep the body class as-is.
+    - Camps hidden: add camps-closed to the body class, like this:
+      <body class="bg-sky-50/20 text-slate-800 antialiased camps-closed">
+-->
 <body class="bg-sky-50/20 text-slate-800 antialiased">
 
     <div class="bg-blue-600 text-white text-center py-2 px-4 text-sm font-bold shadow-sm flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
-        <span>🎨 Now Touring for Fall 2026 & Registering for Summer Camps!</span>
+        <span>🎨 Now Touring for Fall 2026<span data-camp> & Registering for Summer Camps</span>!</span>
         <a href="tel:8018367904" class="underline hover:text-sky-200">Call or Text: (801) 836-7904</a>
     </div>
 
@@ -77,7 +92,7 @@
             <nav class="hidden lg:flex items-center gap-8 font-semibold text-blue-900">
                 <a href="#about" class="hover:text-blue-600 transition">Our Mission</a>
                 <a href="#classes" class="hover:text-blue-600 transition">Classes & Pricing</a>
-                <a href="#camps" class="hover:text-blue-600 transition">Summer Camps</a>
+                <a href="#camps" data-camp class="hover:text-blue-600 transition">Summer Camps</a>
                 <a href="#staff" class="hover:text-blue-600 transition">Meet Our Staff</a>
                 <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
                 <a href="#contact" class="hover:text-blue-600 transition">Contact Us</a>
@@ -118,13 +133,13 @@
                     Where every child is <span class="text-sky-300">a masterpiece.</span>
                 </h1>
                 <p class="text-xl sm:text-2xl text-white font-bold mt-4 tracking-wide">
-                    Patchwork Preschool & Summer Camps
+                    Patchwork Preschool<span data-camp> & Summer Camps</span>
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
                     <a href="tel:8018367904" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-700 transition text-center shadow-lg text-base transform hover:-translate-y-0.5">
                         Call/Text to Enroll Now
                     </a>
-                    <a href="#camps" class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition text-center shadow-sm text-base">
+                    <a href="#camps" data-camp class="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-full hover:bg-white/20 transition text-center shadow-sm text-base">
                         Explore Summer Camps
                     </a>
                 </div>
@@ -189,7 +204,7 @@
                         <div id="info-panel-3" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-md border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
                             <h4 class="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-950 leading-tight">Hands-On Learning</h4>
                             <p class="text-slate-600 text-sm lg:text-base leading-relaxed">We passionately advocate for traditional "learning by doing." We empower active preschool students through a rich variety of immersive, tactile sensory experiences, cooperative play setups, and custom discovery projects.</p>
-                            <a href="#camps" class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-sm mt-1">Explore Summer Programming</a>
+                            <a href="#camps" data-camp class="inline-block bg-blue-600 text-white font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-700 transition shadow-sm mt-1">Explore Summer Programming</a>
                         </div>
 
                         <div id="info-panel-4" class="showcase-info-panel bg-white rounded-[2rem] p-8 shadow-md border border-blue-100/50 space-y-4 absolute inset-x-0 transition-all duration-500 opacity-0 translate-y-4 pointer-events-none">
@@ -258,7 +273,7 @@
                     <div class="p-6 space-y-3">
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">We passionately advocate for traditional "learning by doing." We empower active preschool students through a rich variety of immersive, tactile sensory experiences, cooperative play setups, and custom discovery projects.</p>
                         <div class="pt-2">
-                            <a href="#camps" class="inline-block w-full text-center bg-blue-600 text-white font-bold text-xs px-5 py-3 rounded-xl hover:bg-blue-700 transition shadow-xs">Explore Summer Programming</a>
+                            <a href="#camps" data-camp class="inline-block w-full text-center bg-blue-600 text-white font-bold text-xs px-5 py-3 rounded-xl hover:bg-blue-700 transition shadow-xs">Explore Summer Programming</a>
                         </div>
                     </div>
                 </div>
@@ -380,7 +395,7 @@
         </div>
     </section>
 
-    <section id="camps" class="py-16 bg-white">
+    <section id="camps" data-camp class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="grid grid-cols-1 justify-items-center text-center lg:text-left lg:justify-items-start lg:col-span-8 space-y-6 w-full">
@@ -556,7 +571,7 @@
                             </button>
                             <div x-show="active === 1" x-collapse x-cloak>
                                 <div class="px-6 pb-5 text-slate-400 text-xs sm:text-sm border-t border-slate-700/40 pt-3 leading-relaxed">
-                                    Our traditional school-year preschool tracks are tailored for children ages 3 to 5. For our Summer Day Camp programs, we welcome children ages 3 up to 7 years old. All children must be fully potty-trained before their first day of attendance.
+                                    Our traditional school-year preschool tracks are tailored for children ages 3 to 5.<span data-camp> For our Summer Day Camp programs, we welcome children ages 3 up to 7 years old.</span> All children must be fully potty-trained before their first day of attendance.
                                 </div>
                             </div>
                         </div>
@@ -699,14 +714,14 @@
                 <ul class="space-y-3 text-sm">
                     <li><a href="#about" class="hover:text-white transition">Our Mission</a></li>
                     <li><a href="#classes" class="hover:text-white transition">Class Schedules & Pricing</a></li>
-                    <li><a href="#camps" class="hover:text-white transition">Summer Camps</a></li>
+                    <li data-camp><a href="#camps" class="hover:text-white transition">Summer Camps</a></li>
                     <li><a href="#staff" class="hover:text-white transition">Meet Our Staff</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold mb-5">Contact Us</h4>
                 <div class="space-y-3 text-sm">
-                    <a href="http://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank" class="block hover:text-white transition group">
+                    <a href="https://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank" class="block hover:text-white transition group">
                         <span class="block text-slate-400 group-hover:text-blue-400 transition">📍 1084 West 990 North,<br>Provo, UT 84604</span>
                     </a>
                     <p class="block pt-1">📞 Call / Text: (801) 836-7904</p>
@@ -715,7 +730,7 @@
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold mb-5">Interactive Map</h4>
-                 <a href="http://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank">
+                 <a href="https://maps.google.com/?q=1084+West+990+North+Provo+UT+84604" target="_blank">
                     <img src="images/patchwork-preschool-provo-map.png" alt="Map to Patchwork Preschool" class="rounded-xl border-2 border-slate-800 shadow-lg hover:border-sky-500 transition w-full max-w-[280px] md:max-w-none mx-auto">
                  </a>
             </div>
